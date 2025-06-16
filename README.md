@@ -17,8 +17,11 @@ Foi utilizado o algoritmo de ordenação "quicksort" da biblioteca <stdlib.h> pa
 
 **Estrutura do programa1:** 
 "identificar_tipo": recebe um valor em string e identifica se ele é int, float, bool ou uma string.
+
 "obter_sensores": busca ou se não existir cria sensores por id.
+
 "comparação_leituras": usa o quicksort para ordenar de forma crescente.
+
 "salvar_sensores_nos_arquivos": grava os timestamps ordenados com o sensor e o id, uma em cada linha, cria um arquivo com o nome do sensor nele e por último fecha o arquivo.
 
 ---
@@ -32,9 +35,13 @@ A **entrada** é feita por meio de um comando mandado ao terminal no formato: ".
 
 **Estrutura do programa2:** 
 "criar_timestamps": Cria e imprime um timestamp baseado na data e hora fornecidos pelo usuário e valida ela.
+
 "busca_binaria": realiza a busca binária para encontrar o valor mais próximo ao solicitado pelo usuário.
+
 "validar_argumentos": valida se o número de argumentos mandados pelo usuário é a quantidade pedida e se estiver certo ele copia e converte a string dos argumentos em data e hora para inteiros.
+
 "carregar_leituras": abre o arquivo <id_sensor>.txt lê e armazena os dados.
+
 "exibir_leitura_proxima": recebe as leituras e um índice, converte o timestamp para o formato padão de data e hora e imprime no console os dados.
 
 ---
@@ -48,11 +55,17 @@ A **entrada** é feita por meio de um comando mandado ao terminal no formato: ".
 
 **Estrutura do programa3:** 
 "conversao_para_valor_equivalentes": converte a string do tipo que o usuário escolheu para um valor string, float, bool ou int.
+
 "criar_timestamp": cria um timestamp apartir de uma data e horário e converte para uma estrutura UNIX(timestamp).
+
 "timestamp_aleatorio": gera o timestamp aleatório, apartir das duas datas (início e fim).
+
 "criar_string_random": gera uma string aleátoria.
+
 "ler_timestamps": lê os argumentos mandados pelo usuário e converte para timestamps e verifica se a data é válida.
+
 "ler_sensores": lê os argumentos mandados pelo usuário e armazena o nome dos sensores e o tipo de dado.
+
 "gerar_dados": gera 2000 leituras dos dados informados na linha de comando mandada pelo usuário e escreve no formato <timestamp> <sensor> <valor>
 
 ---
