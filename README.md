@@ -15,7 +15,8 @@ A **entrada** desse código é feita desta maneira: "./programa1 leituras.txt". 
 Foi utilizado o algoritmo de ordenação "quicksort" da biblioteca <stdlib.h> para cumprir o objetivo de "ordenar as leituras por timestamp em ordem crescente.".
 
 
-**Estrutura do programa1:** 
+**Estrutura do programa 1:** 
+
 "identificar_tipo": recebe um valor em string e identifica se ele é int, float, bool ou uma string.
 
 "obter_sensores": busca ou se não existir cria sensores por id.
@@ -33,7 +34,8 @@ Esse programa tem como objetivo pesuisar a medida de um sensor em específico co
 A **entrada** é feita por meio de um comando mandado ao terminal no formato: "./programa2 <sensor> dd mm aaaa hh mm ss" e entrega na **saída**:"Leitura mais próxima encontrada foi: Timestamp: dd/mm/aaaa Sensor:<id_sendor> Valor:<valor>" ou apresenta algum erro.
 
 
-**Estrutura do programa2:** 
+**Estrutura do programa 2:** 
+
 "criar_timestamps": Cria e imprime um timestamp baseado na data e hora fornecidos pelo usuário e valida ela.
 
 "busca_binaria": realiza a busca binária para encontrar o valor mais próximo ao solicitado pelo usuário.
@@ -53,7 +55,8 @@ Cria um arquivo teste com data e hora do início e fim gerados aleatoriamente, n
 A **entrada** é feita por meio de um comando mandado ao terminal no formato: "./programa3 dd_ini mm_ini aaaa_ini hr_ini mm_ini ss_ini dd_fin mm_fin aaaa_fin hr_fin mm_fin ss_fin <sensor1> <tipo1> <sensor2> <tipo2>...." (não necessáriamente precisa ter 2 sensores, apenas precisa de 1 obrigatóriamente). E a **saída** é feita desta maneira: "Arquivo com o nome 'leituras.txt' gerado com sucesso." ou apresenta algum erro.
 
 
-**Estrutura do programa3:** 
+**Estrutura do programa 3:** 
+
 "conversao_para_valor_equivalentes": converte a string do tipo que o usuário escolheu para um valor string, float, bool ou int.
 
 "criar_timestamp": cria um timestamp apartir de uma data e horário e converte para uma estrutura UNIX(timestamp).
