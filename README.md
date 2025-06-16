@@ -72,3 +72,8 @@ A **entrada** é feita por meio de um comando mandado ao terminal no formato: ".
 "gerar_dados": gera 2000 leituras dos dados informados na linha de comando mandada pelo usuário e escreve no formato <timestamp> <sensor> <valor>
 
 ---
+**Problemas Encontrados:**
+
+° Confusão em reutilizar o código da prova passada e melhorar ele para as novas necessidades. Solução: Comparar cuidadosamente os dados necessários entre os dois códigos e focar em atingir os resultados pedidos nessa prova.
+° Adicionar o timestamp no arquivo de leitura. Solução: apontar pro id na linha do código.
+
