@@ -4,7 +4,8 @@ Prova do segundo bimestre da matéria estrutura de dados.
 É recomendado utilizar o programa na seguinte ordem: programa3, programa1 e por ultimo programa2.
 
 ---
-##**Programa 1:**##
+**Programa 1:**
+
 Esse programa tem como objetivo ler um arquivo.txt que tenha informações no formato: <TIMESTAMP> <ID_SENSOR> <VALOR>, e identificar quais sensores estão presentes nesse arquivo e organizar eles criando um novo .txt com o nome de cada sensor presente. (a criação de um arquivo com as leituras será um trabalho do programa 3.
 
 
@@ -21,7 +22,8 @@ Foi utilizado o algoritmo de ordenação "quicksort" da biblioteca <stdlib.h> pa
 "salvar_sensores_nos_arquivos": grava os timestamps ordenados com o sensor e o id, uma em cada linha, cria um arquivo com o nome do sensor nele e por último fecha o arquivo.
 
 ---
-##**Programa 2:**##
+**Programa 2:**
+
 Esse programa tem como objetivo pesuisar a medida de um sensor em específico com base em uma data e hora informada pelo usuário.
 
 
@@ -36,8 +38,7 @@ A **entrada** é feita por meio de um comando mandado ao terminal no formato: ".
 "exibir_leitura_proxima": recebe as leituras e um índice, converte o timestamp para o formato padão de data e hora e imprime no console os dados.
 
 ---
-##**Programa 3:**##
-
+**Programa 3:**
 
 Cria um arquivo teste com data e hora do início e fim gerados aleatoriamente, nome dos sensores escolhidos pelo usuário e o tipo de amostra a ser representado naquele dado, também escolhido pelo usuário, e cria 2000 leituras aleatórias com aqueles dados.
 
