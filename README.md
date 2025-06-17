@@ -1,4 +1,4 @@
-# N2_AT2-Estrutura-de-Dados
+# N2_AT1-Estrutura-de-Dados
 Prova do segundo bimestre da matéria estrutura de dados.
 
 É recomendado utilizar o programa na seguinte ordem: programa3, programa1 e por ultimo programa2.
