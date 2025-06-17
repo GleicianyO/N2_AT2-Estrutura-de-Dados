@@ -4,12 +4,14 @@
 #include <time.h>
 #include <limits.h>
 
+
 typedef struct 
 {
     time_t timestamp;
     char id_sensor[20];
     char valor[20];
 } Leituras;
+
 
 time_t criar_timestamp(int dia, int mes, int ano, int hora, int min, int seg) {
     struct tm t = {0};
@@ -49,29 +51,32 @@ int busca_binaria(Leituras *leituras, int tamanho, time_t procurando) {
             indice_mais_proximo = meio;
         }
 
-        if (atual < procurando)
-            inicio = meio + 1;
-        else
-            fim = meio - 1;
+        if (atual > procurando) {
+            inicio = meio + 1;  
+        } else {
+            fim = meio - 1;     
+        }
     }
 
     return indice_mais_proximo;
 }
 
 
-int validar_argumentos(int argc, char *argv[], char *nome_sensor, int *dia, int *mes, int *ano, int *hora, int *min, int *seg) {
-    if (argc != 9) {
-        printf("Utilize a seguinte ordem: %s sensor dd mm aaaa hh mm ss\n", argv[0]);
+int validar_argumentos(int argc, char *argv[], char *nome_sensor,
+                      int *dia, int *mes, int *ano, int *hora, int *min, int *seg) {
+    if (argc != 8) {  
+        printf("\nUso correto:\n%s dd mm aaaa hh mm ss SENSOR\n", argv[0]);
         return 0;
     }
 
-    strcpy(nome_sensor, argv[1]);
-    *dia = atoi(argv[2]);
-    *mes = atoi(argv[3]);
-    *ano = atoi(argv[4]);
-    *hora = atoi(argv[5]);
-    *min = atoi(argv[6]);
-    *seg = atoi(argv[7]);
+    *dia = atoi(argv[1]);
+    *mes = atoi(argv[2]);
+    *ano = atoi(argv[3]);
+    *hora = atoi(argv[4]);
+    *min = atoi(argv[5]);
+    *seg = atoi(argv[6]);
+
+    strcpy(nome_sensor, argv[7]);
 
     return 1;
 }
@@ -110,10 +115,10 @@ void exibir_leitura_proxima(Leituras *leituras, int indice) {
 
     strftime(buffer, sizeof(buffer), "%d/%m/%Y %H:%M:%S", tm_info);
 
-    printf("\n\n\nLeitura mais próxima encontrada foi:\n");
+    printf("\nLeitura mais próxima encontrada foi:\n");
     printf("Timestamp: %s\n", buffer);
     printf("Sensor: %s\n", leituras[indice].id_sensor);
-    printf("Valor: %s\n\n\n", leituras[indice].valor);
+    printf("Valor: %s\n\n", leituras[indice].valor);
 }
 
 
@@ -121,18 +126,19 @@ int main(int argc, char *argv[]) {
     char nomeSensor[20];
     int dia, mes, ano, hora, min, seg;
 
-    if (!validar_argumentos(argc, argv, nomeSensor, &dia, &mes, &ano, &hora, &min, &seg))
+    if (!validar_argumentos(argc, argv, nomeSensor, &dia, &mes, &ano, &hora, &min, &seg)) {
         return 1;
+    }
 
     time_t timestamp_procurado = criar_timestamp(dia, mes, ano, hora, min, seg);
     if (timestamp_procurado == -1) {
-        printf("Data/hora inválida: %02d/%02d/%04d %02d:%02d:%02d\n", dia, mes, ano, hora, min, seg);
+        printf("Data/hora inválida: %02d/%02d/%04d %02d:%02d:%02d\n",
+               dia, mes, ano, hora, min, seg);
         return 1;
     }
 
     Leituras leituras[5000];
     int total = carregar_leituras(nomeSensor, leituras, 5000);
-
     if (total < 1) {
         printf("Arquivo está vazio ou mal formatado.\n");
         return 1;
@@ -148,8 +154,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
-
-
-
-
