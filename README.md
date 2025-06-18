@@ -9,10 +9,13 @@ Prova do segundo bimestre da matéria estrutura de dados.
 Esse programa tem como objetivo ler um arquivo.txt que tenha informações no formato: <TIMESTAMP> <ID_SENSOR> <VALOR>, e identificar quais sensores estão presentes nesse arquivo e organizar eles criando um novo .txt com o nome de cada sensor presente. (a criação de um arquivo com as leituras será um trabalho do programa 3.
 
 
+
 A **entrada** desse código é feita desta maneira: "./programa1 leituras.txt". E a sua **saída** dependerá dos sensores presentes, mas ela informara quantos sensores foram encontrados, se a tarefa foi finalizada e cria arquivos no mesmo diretório com a seguinte sintaxe: "sensor.txt" ou apresenta algum erro.
 
 
+
 Foi utilizado o algoritmo de ordenação "quicksort" da biblioteca <stdlib.h> para cumprir o objetivo de "ordenar as leituras por timestamp em ordem crescente.".
+
 
 
 **Estrutura do programa 1:** 
@@ -31,7 +34,9 @@ Foi utilizado o algoritmo de ordenação "quicksort" da biblioteca <stdlib.h> pa
 Esse programa tem como objetivo pesuisar a medida de um sensor em específico com base em uma data e hora informada pelo usuário.
 
 
+
 A **entrada** é feita por meio de um comando mandado ao terminal no formato: "./programa2 <sensor> dd mm aaaa hh mm ss", exemplo: "./programa 01 01 2023 12 30 00 CONJ_Z" e entrega na **saída**:"Leitura mais próxima encontrada foi: Timestamp: dd/mm/aaaa Sensor:<id_sendor> Valor:<valor>" ou apresenta algum erro.
+
 
 
 **Estrutura do programa 2:** 
@@ -52,7 +57,9 @@ A **entrada** é feita por meio de um comando mandado ao terminal no formato: ".
 Cria um arquivo teste com data e hora do início e fim gerados aleatoriamente, nome dos sensores escolhidos pelo usuário e o tipo de amostra a ser representado naquele dado, também escolhido pelo usuário, e cria 2000 leituras aleatórias com aqueles dados.
 
 
+
 A **entrada** é feita por meio de um comando mandado ao terminal no formato: "./programa3 dd_ini mm_ini aaaa_ini hr_ini mm_ini ss_ini dd_fin mm_fin aaaa_fin hr_fin mm_fin ss_fin <sensor1> <tipo1> <sensor2> <tipo2>...." (não necessáriamente precisa ter 2 sensores, apenas precisa de 1 obrigatóriamente) um exemplo de entrada seria: "./programa3 01 01 2023 00 00 00 02 01 2023 23 59 59 CONJ_Z int CONJ_Q float BINARIO bool TEXTO string". E a **saída** é feita desta maneira: "Arquivo com o nome 'leituras.txt' gerado com sucesso." ou apresenta algum erro.
+
 
 
 **Estrutura do programa 3:** 
